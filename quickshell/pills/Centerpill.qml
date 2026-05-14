@@ -44,7 +44,7 @@ Rectangle {
                 target: floatingIcon
                 anchors.horizontalCenterOffset: -centerPillRoot.asymmetricOffset
                 rotation: 0
-                iconColor: "#ffffff"
+                iconColor: Theme.fg0
                 iconText: "󱄅"
                 iconSize: 35
             }

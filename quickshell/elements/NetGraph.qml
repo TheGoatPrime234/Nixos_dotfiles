@@ -35,7 +35,7 @@ Rectangle {
             Text { 
                 text: valueText
                 font { family: Theme.fnt; pixelSize: Theme.t2 }
-                color: "#ffffff" 
+                color: Theme.fg0 
             }
         }
 

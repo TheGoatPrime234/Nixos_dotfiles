@@ -40,7 +40,7 @@ Rectangle {
             // Elastischer Platzhalter (Drückt "SubText" und "Prozent" ganz nach rechts!)
             Item { Layout.fillWidth: true }
             
-            Text { text: barRoot.subText; font.family: Theme.fnt; font.pixelSize: Theme.t1; color: "#ffffff" }
+            Text { text: barRoot.subText; font.family: Theme.fnt; font.pixelSize: Theme.t1; color: Theme.fg0 }
             Text { text: Math.round(animPct) + "%"; font.family: Theme.fnt; font.pixelSize: Theme.t1; font.bold: true; color: accentColor }
         }
         

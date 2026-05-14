@@ -82,7 +82,7 @@ Rectangle {
         
         Text { 
             text: tachoRoot.name + " " + Math.round(animPct) + "%"
-            font.family: Theme.fnt; font.pixelSize: Theme.t1; font.bold: true; color: "#ffffff" 
+            font.family: Theme.fnt; font.pixelSize: Theme.t1; font.bold: true; color: Theme.fg0 
             Layout.alignment: Qt.AlignHCenter
         }
         Text { 

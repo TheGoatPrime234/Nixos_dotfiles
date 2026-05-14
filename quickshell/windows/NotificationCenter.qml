@@ -208,7 +208,7 @@ PanelWindow {
                                 }
                                 ColumnLayout {
                                     Layout.fillWidth: true; spacing: 4
-                                    Text { text: modelData.notif.summary; font.family: Theme.fnt; font.bold: true; color: isVisuallySelected ? Theme.bg0 : "#ffffff"; Layout.fillWidth: true; elide: Text.ElideRight }
+                                    Text { text: modelData.notif.summary; font.family: Theme.fnt; font.bold: true; color: isVisuallySelected ? Theme.bg0 : Theme.fg0; Layout.fillWidth: true; elide: Text.ElideRight }
                                     Text { text: modelData.notif.body; font.family: Theme.fnt; font.pixelSize: Theme.t2; color: isVisuallySelected ? Theme.bg0 : Theme.bg3; Layout.fillWidth: true; elide: Text.ElideRight; maximumLineCount: 2; wrapMode: Text.Wrap }
                                 }
                                 Rectangle {

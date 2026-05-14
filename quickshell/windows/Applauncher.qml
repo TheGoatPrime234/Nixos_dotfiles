@@ -119,7 +119,7 @@ PanelWindow {
                             font.family: Theme.fnt
                             font.pixelSize: Theme.t1 + 2
                             font.bold: true
-                            color: parent.parent.isSelected ? Theme.bg0 : "#ffffff"
+                            color: parent.parent.isSelected ? Theme.bg0 : Theme.fg0
                         }
                         Text {
                             text: modelData.genericName ? "— " + modelData.genericName : ""

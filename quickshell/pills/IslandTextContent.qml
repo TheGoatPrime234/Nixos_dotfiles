@@ -19,7 +19,7 @@ Item {
             font.family: Theme.fnt
             font.pixelSize: Theme.t1
             font.bold: true
-            color: "#ffffff"
+            color: Theme.fg0
             Layout.fillWidth: true
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter

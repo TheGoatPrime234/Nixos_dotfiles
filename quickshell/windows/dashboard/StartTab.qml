@@ -126,7 +126,7 @@ Item {
                 Layout.alignment: Qt.AlignHCenter
                 text: Qt.formatDateTime(new Date(), "hh:mm")
                 font { family: Theme.fnt; pixelSize: 42; bold: true }
-                color: "#ffffff"
+                color: Theme.fg0
             }
             
             Text {
@@ -145,7 +145,7 @@ Item {
             ColumnLayout {
                 spacing: 2
                 Text { text: startTab.greeting + ","; font { family: Theme.fnt; pixelSize: Theme.t1 + 2 } color: Theme.bg2 }
-                Text { text: userProcess.userHost; font { family: Theme.fnt; pixelSize: 28; bold: true } color: "#ffffff" }
+                Text { text: userProcess.userHost; font { family: Theme.fnt; pixelSize: 28; bold: true } color: Theme.fg0 }
             }
 
             RowLayout {
@@ -158,7 +158,7 @@ Item {
                     ColumnLayout {
                         anchors.centerIn: parent; spacing: 2
                         Text { text: "Uptime"; font.family: Theme.fnt; font.pixelSize: Theme.t4; color: Theme.ac1; Layout.alignment: Qt.AlignHCenter }
-                        Text { text: sysInfoProcess.uptime; font.family: Theme.fnt; font.pixelSize: Theme.t2; color: "#ffffff"; Layout.alignment: Qt.AlignHCenter }
+                        Text { text: sysInfoProcess.uptime; font.family: Theme.fnt; font.pixelSize: Theme.t2; color: Theme.fg0; Layout.alignment: Qt.AlignHCenter }
                     }
                 }
                 
@@ -169,7 +169,7 @@ Item {
                     ColumnLayout {
                         anchors.centerIn: parent; spacing: 2
                         Text { text: "Kernel"; font.family: Theme.fnt; font.pixelSize: Theme.t4; color: Theme.ac2; Layout.alignment: Qt.AlignHCenter }
-                        Text { text: sysInfoProcess.kernel; font.family: Theme.fnt; font.pixelSize: Theme.t2; color: "#ffffff"; Layout.alignment: Qt.AlignHCenter }
+                        Text { text: sysInfoProcess.kernel; font.family: Theme.fnt; font.pixelSize: Theme.t2; color: Theme.fg0; Layout.alignment: Qt.AlignHCenter }
                     }
                 }
                 
@@ -180,7 +180,7 @@ Item {
                     ColumnLayout {
                         anchors.centerIn: parent; spacing: 2
                         Text { text: "NixOS"; font.family: Theme.fnt; font.pixelSize: Theme.t4; color: Theme.ac1; Layout.alignment: Qt.AlignHCenter }
-                        Text { text: sysInfoProcess.osVersion; font.family: Theme.fnt; font.pixelSize: Theme.t2; color: "#ffffff"; Layout.alignment: Qt.AlignHCenter }
+                        Text { text: sysInfoProcess.osVersion; font.family: Theme.fnt; font.pixelSize: Theme.t2; color: Theme.fg0; Layout.alignment: Qt.AlignHCenter }
                     }
                 }
             }

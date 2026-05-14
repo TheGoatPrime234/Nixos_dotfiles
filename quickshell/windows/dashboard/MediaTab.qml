@@ -78,7 +78,7 @@ Item {
                 radius: Theme.rad
                 color: Theme.bg1
                 clip: true
-                border { width: 1; color: Theme.bg2 }
+                border { width: 1; color: Theme.ac2 }
 
                 Image {
                     anchors.fill: parent
@@ -107,7 +107,7 @@ Item {
                     spacing: 2
                     Text {
                         text: mediaTab.player && mediaTab.player.trackTitle ? mediaTab.player.trackTitle : "Unbekannter Titel"
-                        font.family: Theme.fnt; font.pixelSize: Theme.t1 + 2; font.bold: true; color: "#ffffff"
+                        font.family: Theme.fnt; font.pixelSize: Theme.t1 + 2; font.bold: true; color: Theme.fg0
                         elide: Text.ElideRight; Layout.fillWidth: true
                     }
                     Text {
@@ -138,7 +138,7 @@ Item {
                             }
                             height: parent.height
                             color: Theme.ac1
-                            radius: 2
+                            radius: Theme.rad
                             Behavior on width { NumberAnimation { duration: 250; easing.type: Easing.Linear } }
                         }
                     }

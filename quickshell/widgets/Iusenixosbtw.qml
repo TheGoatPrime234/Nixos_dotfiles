@@ -26,7 +26,7 @@ Rectangle { // Icon Widget Root
 		id: iuseNixosbtwtext
 		anchors.centerIn: parent 
 		text: "󱄅"
-		color: "#ffffff"
+		color: Theme.fg0
 		font {
 			pixelSize: 35
 			bold: true 

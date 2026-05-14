@@ -19,8 +19,6 @@ Item {
             event.accepted = true;
         }
     }
-
-    // --- DATEN ---
     property string localIp: "0.0.0.0"
     property string tailscaleIp: "N/A"
     property string ssid: "Getrennt"
@@ -116,7 +114,7 @@ Item {
                 ColumnLayout {
                     anchors.centerIn: parent; spacing: 2
                     Text { text: "Lokale IP"; font.family: Theme.fnt; font.pixelSize: Theme.t4; color: Theme.ac1; Layout.alignment: Qt.AlignHCenter }
-                    Text { text: networkTab.localIp; font.family: Theme.fnt; font.pixelSize: Theme.t2; color: "#ffffff"; Layout.alignment: Qt.AlignHCenter }
+                    Text { text: networkTab.localIp; font.family: Theme.fnt; font.pixelSize: Theme.t2; color: Theme.fg0; Layout.alignment: Qt.AlignHCenter }
                 }
             }
             Rectangle {
@@ -126,7 +124,7 @@ Item {
                 ColumnLayout {
                     anchors.centerIn: parent; spacing: 2
                     Text { text: "Tailscale"; font.family: Theme.fnt; font.pixelSize: Theme.t4; color: Theme.ac2; Layout.alignment: Qt.AlignHCenter }
-                    Text { text: networkTab.tailscaleIp; font.family: Theme.fnt; font.pixelSize: Theme.t2; color: "#ffffff"; Layout.alignment: Qt.AlignHCenter }
+                    Text { text: networkTab.tailscaleIp; font.family: Theme.fnt; font.pixelSize: Theme.t2; color: Theme.fg0; Layout.alignment: Qt.AlignHCenter }
                 }
             }
         }
