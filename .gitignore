@@ -20,7 +20,7 @@ spotify
 syncthing
 user-dirs*
 
-nix-timetracker
+nix-timetracker/
 
 nix-switcher/kittythemes.json
 nix-switcher/kittythemes
