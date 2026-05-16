@@ -1,0 +1,8 @@
+{
+  "theme": "dracula",
+  "kittytheme": "dracula",
+  "wallpaper": "dracula",
+  "themedir": "/home/cato/.config/nix-switcher/themes",
+  "wallpaperdir": "/home/cato/.config/rice/wallpaper",
+  "templatedir": "/home/cato/.config/nix-switcher/template"
+}

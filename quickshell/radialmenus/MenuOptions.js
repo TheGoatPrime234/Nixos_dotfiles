@@ -49,7 +49,7 @@ function buildMenu(gearwheel, GlobalNotifs, GlobalDashboard, nixSwitcherProcess)
 			label: "Themes",
 			load: function() {
 			    var req = new XMLHttpRequest();
-			    req.open("GET", "file:///home/cato/.config/rice/nix-switcher/links.json", false);
+			    req.open("GET", "file:///home/cato/.config/nix-switcher/links.json", false);
 			    req.send(null);
 			    if (req.status === 200 || req.status === 0) {
 				try {
@@ -77,7 +77,7 @@ function buildMenu(gearwheel, GlobalNotifs, GlobalDashboard, nixSwitcherProcess)
 			    var json = gearwheel.fullJsonData;
 			    if (!json) {
 				var req = new XMLHttpRequest();
-				req.open("GET", "file:///home/cato/.config/rice/nix-switcher/links.json", false);
+				req.open("GET", "file:///home/cato/.config/nix-switcher/links.json", false);
 				req.send(null);
 				if (req.status === 200 || req.status === 0) {
 				    try {
@@ -89,7 +89,7 @@ function buildMenu(gearwheel, GlobalNotifs, GlobalDashboard, nixSwitcherProcess)
 				}
 			    }
 			    var cfgReq = new XMLHttpRequest();
-			    cfgReq.open("GET", "file:///home/cato/.config/rice/nix-switcher/config.json", false);
+			    cfgReq.open("GET", "file:///home/cato/.config/nix-switcher/config.json", false);
 			    cfgReq.send(null);
 			    var walls = [];
 			    if ((cfgReq.status === 200 || cfgReq.status === 0) && json) {
@@ -116,7 +116,7 @@ function buildMenu(gearwheel, GlobalNotifs, GlobalDashboard, nixSwitcherProcess)
 			label: "Link",
 			load: function() {
 			    var req = new XMLHttpRequest();
-			    req.open("GET", "file:///home/cato/.config/rice/nix-switcher/wallpaper.json", false);
+			    req.open("GET", "file:///home/cato/.config/nix-switcher/wallpaper.json", false);
 			    req.send(null);
 			    var walls = [];
 			    if (req.status === 200 || req.status === 0) {
@@ -128,7 +128,7 @@ function buildMenu(gearwheel, GlobalNotifs, GlobalDashboard, nixSwitcherProcess)
 				preview: "file://" + path,
 				children: function() {
 				    var themeReq = new XMLHttpRequest();
-				    themeReq.open("GET", "file:///home/cato/.config/rice/nix-switcher/links.json", false);
+				    themeReq.open("GET", "file:///home/cato/.config/nix-switcher/links.json", false);
 				    themeReq.send(null);
 				    var themes = [];
 				    if (themeReq.status === 200 || themeReq.status === 0) {
@@ -153,7 +153,7 @@ function buildMenu(gearwheel, GlobalNotifs, GlobalDashboard, nixSwitcherProcess)
 			label: "Kittytheme",
 			load: function() {
 			    var req = new XMLHttpRequest();
-			    req.open("GET", "file:///home/cato/.config/rice/nix-switcher/kittythemes.json", false);
+			    req.open("GET", "file:///home/cato/.config/nix-switcher/kittythemes.json", false);
 			    req.send(null);
 			    var themes = [];
 			    if (req.status === 200 || req.status === 0) {

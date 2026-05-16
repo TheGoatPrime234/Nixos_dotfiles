@@ -131,9 +131,10 @@ PanelWindow {
                     id: startTab 
                     property bool isFocused: dashBox.isContentFocused && dashBox.currentTab === 2
                 }
-                Item { 
-                    Text { anchors.centerIn: parent; text: "Netzwerk\nkommt hier hin!"; color: Theme.bg2; font.family: Theme.fnt; horizontalAlignment: Text.AlignHCenter } 
-                }
+		NetworkTab {
+		    id: networkTab
+                    property bool isFocused: dashBox.isContentFocused && dashBox.currentTab === 3
+		}
                 Item { 
                     Text { anchors.centerIn: parent; text: "Wetter\nkommt hier hin!"; color: Theme.bg2; font.family: Theme.fnt; horizontalAlignment: Text.AlignHCenter } 
                 }
