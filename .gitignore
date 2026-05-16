@@ -14,25 +14,23 @@ gnome-initial-setup-done
 gtk-3.0
 ibus
 inkscape
-lazygit
 mimeapps.list
 mozilla
 spotify
 syncthing
 user-dirs*
 
-nix_timetracker
+nix-timetracker
+
+nix-switcher/kittythemes.json
+nix-switcher/kittythemes
+nix-switcher/links.json
+nix-switcher/recent.json
+nix-switcher/wallpaper.json
+nix-switcher/config.json
+nix-switcher/themes/*/
 
 kitty/current.conf
 hypr/color.conf
 quickshell/color/Current.qml
 
-rice/nix-switcher/links.json
-rice/nix-switcher/config.json
-rice/nix-switcher/kittythemes.json
-rice/nix-switcher/wallpaper.json
-rice/nix-switcher/wallpaper.json
-rice/nix-switcher/wallpaper
-rice/nix-switcher/kittythemes
-rice/nix-switcher/themes/*/
-rice/nix-switcher/recent.json
