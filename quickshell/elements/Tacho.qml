@@ -39,7 +39,7 @@ Rectangle {
         Shape {
             anchors.fill: parent
             ShapePath {
-                fillColor: "transparent"
+                fillColor: Theme.trans
                 strokeColor: Theme.bg2
                 strokeWidth: 8
                 capStyle: ShapePath.RoundCap
@@ -51,7 +51,7 @@ Rectangle {
                 }
             }
             ShapePath {
-                fillColor: "transparent"
+                fillColor: Theme.trans
                 strokeColor: accentColor
                 strokeWidth: 8
                 capStyle: ShapePath.RoundCap
@@ -87,7 +87,7 @@ Rectangle {
         }
         Text { 
             text: tachoRoot.subText
-            font.family: Theme.fnt; font.pixelSize: Theme.t2; color: Theme.bg3 
+            font.family: Theme.fnt; font.pixelSize: Theme.t2; color: Theme.ac3
             Layout.alignment: Qt.AlignHCenter
         }
     }

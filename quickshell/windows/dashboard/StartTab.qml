@@ -32,8 +32,6 @@ Item {
 
     Process {
         id: sysInfoProcess
-        // FIX: Uptime aus /proc/uptime (sehr akkurat, z.B. 2h 15m)
-        // FIX: NixOS Version wird nach dem zweiten Punkt abgeschnitten
         command: ["bash", "-c", "
             uptime=$(awk '{print int($1/3600)\"h \"int(($1%3600)/60)\"m\"}' /proc/uptime)
             kernel=$(uname -r)
@@ -59,15 +57,15 @@ Item {
 
     property var nixenStats: { "level": 0, "pct": 0 }
     property var nvimStats:  { "level": 0, "pct": 0 }
-    property var rustStats:  { "level": 0, "pct": 0 }
+    property var terminalStats:  { "level": 0, "pct": 0 }
 
     Process {
         id: trackerProcess
         command: ["bash", "-c", "
             nixen=$(nix-timetracker status nixen 2>/dev/null || echo '{}')
             nvim=$(nix-timetracker status nvim 2>/dev/null || echo '{}')
-            rust=$(nix-timetracker status rust 2>/dev/null || echo '{}')
-            echo \"$nixen|$nvim|$rust\"
+            terminal=$(nix-timetracker status terminal 2>/dev/null || echo '{}')
+            echo \"$nixen|$nvim|$terminal\"
         "]
         running: dashWindow.visible
         onExited: trackerTimer.start()
@@ -88,7 +86,7 @@ Item {
                     
                     try {
                         let rs = JSON.parse(parts[2]);
-                        if (rs.app) startTab.rustStats = { "level": rs.level, "pct": rs.progress_percent };
+                        if (rs.app) startTab.terminalStats = { "level": rs.level, "pct": rs.progress_percent };
                     } catch(e) {}
                 }
             }
@@ -191,7 +189,16 @@ Item {
                 
                 RowLayout {
                     spacing: Theme.spc2
-                    
+                    Tacho {
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: 140
+                        icon: "" 
+                        name: "Terminal"
+                        pct: startTab.terminalStats.pct
+                        subText: "Level " + startTab.terminalStats.level
+                        accentColor: Theme.ac1
+                        isFocused: startTab.isFocused && startTab.selectedIndex === 2
+                    }
                     Tacho {
                         Layout.fillWidth: true
                         Layout.preferredHeight: 140
@@ -202,7 +209,6 @@ Item {
                         accentColor: Theme.ac1
                         isFocused: startTab.isFocused && startTab.selectedIndex === 0
                     }
-                    
                     Tacho {
                         Layout.fillWidth: true
                         Layout.preferredHeight: 140
@@ -212,17 +218,6 @@ Item {
                         subText: "Level " + startTab.nvimStats.level
                         accentColor: Theme.ac2
                         isFocused: startTab.isFocused && startTab.selectedIndex === 1
-                    }
-                    
-                    Tacho {
-                        Layout.fillWidth: true
-                        Layout.preferredHeight: 140
-                        icon: "" 
-                        name: "Rust"
-                        pct: startTab.rustStats.pct
-                        subText: "Level " + startTab.rustStats.level
-                        accentColor: Theme.ac1
-                        isFocused: startTab.isFocused && startTab.selectedIndex === 2
                     }
                 }
             }
