@@ -97,8 +97,10 @@ Item {
 
     property string greeting: {
         let hour = new Date().getHours();
-        if (hour < 11) return "Guten Morgen";
-        if (hour < 18) return "Guten Tag";
+        if (hour < 8) return "Guten Morgen";
+        if (hour < 12) return "Guten Tag";
+        if (hour < 13) return "Mahlzeit";
+        if (hour < 14) return "Guten Tag";
         return "Guten Abend";
     }
 
@@ -106,8 +108,6 @@ Item {
         anchors.fill: parent
         anchors.margins: Theme.spc1
         spacing: Theme.spc1 * 2
-
-        // --- LINKE SEITE ---
         ColumnLayout {
             Layout.preferredWidth: parent.width * 0.4
             spacing: Theme.spc2
