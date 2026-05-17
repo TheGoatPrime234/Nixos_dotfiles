@@ -32,8 +32,8 @@ PanelWindow {
 	    if (currentTab === 1) return 340;
 	    if (currentTab === 2) return 480;
 	    if (currentTab === 3) return 350;
-	    if (currentTab === 4) return 420;
-	    return 420;3
+	    if (currentTab === 4) return 480;
+	    return 420;
 	}
         
         color: Theme.bg0
@@ -138,9 +138,10 @@ PanelWindow {
 		    id: networkTab
                     property bool isFocused: dashBox.isContentFocused && dashBox.currentTab === 3
 		}
-                Item { 
-                    Text { anchors.centerIn: parent; text: "Wetter\nkommt hier hin!"; color: Theme.bg2; font.family: Theme.fnt; horizontalAlignment: Text.AlignHCenter } 
-                }
+		WeatherTab {
+		    id: weatherTab
+                    property bool isFocused: dashBox.isContentFocused && dashBox.currentTab === 4
+		}
             }
 
             Rectangle {
