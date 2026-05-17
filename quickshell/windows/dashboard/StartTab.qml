@@ -34,13 +34,13 @@ Item {
         id: sysInfoProcess
         command: ["bash", "-c", "
             uptime=$(awk '{print int($1/3600)\"h \"int(($1%3600)/60)\"m\"}' /proc/uptime)
-            kernel=$(uname -r)
+            generation=$(readlink /nix/var/nix/profiles/system | cut -d'-' -f2)
             os=$(nixos-version | cut -d. -f1,2)
-            echo \"$uptime|$kernel|$os\"
+            echo \"$uptime|$generation|$os\"
         "]
         running: dashWindow.visible
         property string uptime: "Lade..."
-        property string kernel: "Lade..."
+        property string generation: "Lade..."
         property string osVersion: "Lade..."
         
         stdout: SplitParser {
@@ -48,7 +48,7 @@ Item {
                 let parts = data.trim().split("|");
                 if (parts.length >= 3) {
                     sysInfoProcess.uptime = parts[0];
-                    sysInfoProcess.kernel = parts[1];
+                    sysInfoProcess.generation = parts[1];
                     sysInfoProcess.osVersion = parts[2];
                 }
             }
@@ -131,7 +131,7 @@ Item {
                 Layout.alignment: Qt.AlignHCenter
                 text: Qt.formatDateTime(new Date(), "dd. MMMM yyyy")
                 font { family: Theme.fnt; pixelSize: Theme.t2 }
-                color: Theme.bg2 
+                color: Theme.ac2 
             }
         }
 
@@ -142,7 +142,7 @@ Item {
 
             ColumnLayout {
                 spacing: 2
-                Text { text: startTab.greeting + ","; font { family: Theme.fnt; pixelSize: Theme.t1 + 2 } color: Theme.bg2 }
+                Text { text: startTab.greeting + ","; font { family: Theme.fnt; pixelSize: Theme.t1 + 2 } color: Theme.ac2 }
                 Text { text: userProcess.userHost; font { family: Theme.fnt; pixelSize: 28; bold: true } color: Theme.fg0 }
             }
 
@@ -166,8 +166,8 @@ Item {
                     border { width: 1; color: Theme.bg2 }
                     ColumnLayout {
                         anchors.centerIn: parent; spacing: 2
-                        Text { text: "Kernel"; font.family: Theme.fnt; font.pixelSize: Theme.t4; color: Theme.ac2; Layout.alignment: Qt.AlignHCenter }
-                        Text { text: sysInfoProcess.kernel; font.family: Theme.fnt; font.pixelSize: Theme.t2; color: Theme.fg0; Layout.alignment: Qt.AlignHCenter }
+                        Text { text: "Generation"; font.family: Theme.fnt; font.pixelSize: Theme.t4; color: Theme.ac2; Layout.alignment: Qt.AlignHCenter }
+                        Text { text: sysInfoProcess.generation; font.family: Theme.fnt; font.pixelSize: Theme.t2; color: Theme.fg0; Layout.alignment: Qt.AlignHCenter }
                     }
                 }
                 

@@ -28,10 +28,13 @@ PanelWindow {
     Rectangle {
         id: dashBox
         width: parent.width
-        
-        // --- DIE ANIMATION PASSIERT NUR NOCH HIER DRINNEN ---
-        // Media = 340 (klein), System = 420 (normal), Start = 480 (groß)
-        height: currentTab === 1 ? 340 : (currentTab === 2 ? 480 : 420)
+	height: {
+	    if (currentTab === 1) return 340;
+	    if (currentTab === 2) return 480;
+	    if (currentTab === 3) return 350;
+	    if (currentTab === 4) return 420;
+	    return 420;3
+	}
         
         color: Theme.bg0
         radius: Theme.rad
@@ -177,12 +180,12 @@ PanelWindow {
                                 Text { 
                                     text: modelData.icon;
                                     font { family: Theme.fnt; pixelSize: Theme.t1 }
-                                    color: isSelected ? (dashBox.isContentFocused ? Theme.fg0 : Theme.bg0) : Theme.bg2 
+                                    color: isSelected ? (dashBox.isContentFocused ? Theme.fg0 : Theme.bg0) : Theme.ac1
                                 }
                                 Text { 
                                     text: modelData.name;
                                     font { family: Theme.fnt; pixelSize: Theme.t1; bold: true }
-                                    color: isSelected ? (dashBox.isContentFocused ? Theme.fg0 : Theme.bg0) : Theme.bg2 
+                                    color: isSelected ? (dashBox.isContentFocused ? Theme.fg0 : Theme.bg0) : Theme.ac1 
                                 }
                             }
                             MouseArea { 
