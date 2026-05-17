@@ -31,6 +31,6 @@ nix-switcher/config.json
 nix-switcher/themes/*/
 
 kitty/current.conf
-hypr/color.conf
+hypr/hyprland/color.conf
 quickshell/color/Current.qml
 

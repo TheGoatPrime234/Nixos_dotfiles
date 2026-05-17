@@ -1,13 +1,24 @@
 {
   "theme": {
     "catppuccin": {
-      "wallpapers": []
+      "wallpapers": [
+        "/home/cato/.config/rice/wallpaper/dracula2.jpg",
+        "/home/cato/.config/rice/wallpaper/wallhaven/wallhaven-3q5g5v_1920x1080.png",
+        "/home/cato/.config/rice/wallpaper/wallhaven/wallhaven-k8kr2d_1920x1080.png"
+      ]
     },
     "dracula": {
-      "wallpapers": []
+      "wallpapers": [
+        "/home/cato/.config/rice/wallpaper/dracula2.jpg",
+        "/home/cato/.config/rice/wallpaper/wallhaven/wallhaven-3q5g5v_1920x1080.png",
+        "/home/cato/.config/rice/wallpaper/wallhaven/wallhaven-5yk6k9_1920x1080.png",
+        "/home/cato/.config/rice/wallpaper/wallhaven/wallhaven-k8kr2d_1920x1080.png"
+      ]
     },
     "everforest": {
-      "wallpapers": []
+      "wallpapers": [
+        "/home/cato/.config/rice/wallpaper/wallpapercave/everforest1.jpg"
+      ]
     },
     "gruvbox": {
       "wallpapers": []
@@ -16,7 +27,12 @@
       "wallpapers": []
     },
     "tokyo_night": {
-      "wallpapers": []
+      "wallpapers": [
+        "/home/cato/.config/rice/wallpaper/dracula2.jpg",
+        "/home/cato/.config/rice/wallpaper/wallhaven/wallhaven-3q5g5v_1920x1080.png",
+        "/home/cato/.config/rice/wallpaper/wallhaven/wallhaven-5yk6k9_1920x1080.png",
+        "/home/cato/.config/rice/wallpaper/wallhaven/wallhaven-k8kr2d_1920x1080.png"
+      ]
     }
   }
 }

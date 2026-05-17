@@ -1,5 +1,5 @@
 [[database]]
-Name = 'Timetracker Entrys'
+Name = 'Nix-Timetracker'
 Provider = 'sqlite3'
 DBName = ''
-URL = '/home/cato/.config/nix_timetracker/entries.db'
+URL = '/home/cato/.config/nix-timetracker/entries.db'
