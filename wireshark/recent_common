@@ -17,7 +17,7 @@
 # Decimal numbers.
 gui.geometry_main_x: 0
 gui.geometry_main_y: 0
-gui.geometry_main_width: 946
+gui.geometry_main_width: 1906
 gui.geometry_main_height: 1018
 
 # Main window maximized.
